@@ -1,0 +1,28 @@
+
+h1{
+    text-align: center;
+}
+.container{
+    width: 280px;
+    margin: 0 auto;
+    margin-top: 3em;
+    border: solid 2px black;
+    border-radius: 5px;;
+}
+.display{
+    border-bottom: solid 1px black;
+    font-size: 1.7em;
+    height: 1.7em;
+    text-align: right;
+    
+}
+.calculator{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    height: 250px;
+   
+}
+button{
+    font-weight: 700;
+    font-size: 1.3em
+}
