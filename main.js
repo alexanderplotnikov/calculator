@@ -33,8 +33,11 @@ function operate(num1, num2, sign){
             return '';
     }
 }
-function updateDisplay(input){
+function updateDisplay(input, sign){
     display.textContent = input;
+    if( sign != ''){
+        entry.textContent = sign;
+    }  
 }
 function clear(){
     input = [''];
@@ -52,14 +55,14 @@ btns.forEach((btn) => {
         if (e.target.name == "operator"){
             sign = e.target.value;
             if(input[index] != ''){
-                index += 1;
+                index += 1;  
             }
             input[index] = '';
         }
         else {
             input[index] += e.target.value;
         }
-        updateDisplay(input[index]);
+        updateDisplay(input[index], sign);
     })
 });
 let res;
@@ -72,4 +75,4 @@ equal.addEventListener("click", () => {
 });
 const clearBtn = document.querySelector(".clear");
 clearBtn.addEventListener("click", () => clear());
-
+const entry = document.querySelector(".entry");
